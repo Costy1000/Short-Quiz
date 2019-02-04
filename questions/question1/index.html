@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	   <link rel="stylesheet" type="text/css" href="main.css">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700" rel="stylesheet"> 
+	   <title>Quiz</title>
+	   <script src="script.js"></script>
+	   <script src="script2.js"></script>
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	   <script src="clock.js"></script> 
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body  >
+	
+	 <div id="time"></div>
+     <div id="turn"><h4>Turn your phone to play the game</h4></div>
+	 <div id="wrapper">
+		
+		<div id="long-container">
+		  <div class= "short-container">
+			 <div id="container-image">
+				 <div class="title"><h4>Which is the Capital of Vietnam?</h4></div>
+				 <div class="image-text" onclick="redButton(0, 'container-image', 'green')">
+				    <img src="assets/La-Paz.jpg" alt="LaPAZ" >
+			        <div class="red"><i class="fa fa-times "></i></div>
+		            <div class="background-text"><p>La Paz</p></div>
+				 </div>
+				 <div class="image-text" onclick="redButton(1, 'container-image', 'green')">
+					<img src="assets/Antananarivo.jpg" alt="Antananarivo">
+			        <div class="red"><i class="fa fa-times "></i></div>
+		            <div class="background-text"><p>Antananarivo</p></div>
+				 </div>
+				 <div class="image-text"  onclick="redButton(2, 'container-image', 'green')">
+				   <img src="assets/Taskent.jpg" alt="Taskent">
+			       <div class="red "><i class="fa fa-times "></i></div>
+		           <div class="background-text"><p>Taskhent</p></div>  
+				 </div>
+				 <div class="image-text" onclick="greenButton('container-image', 'green')">
+			       <img src="assets/kathmandu.JPG" alt="Kathmandu">
+			       <div class="green" id="green"><i class=" fa fa-check "></i></div>
+		           <div class="background-text"><p>Kathmandu</p></div>
+		        </div> 
+				 <button  class= "button-green" id="button-green">Next</button>
+			 </div>
+		  </div>
+		 <div class= "short-container">
+			  <div id="container-image2" >
+				 <div class="title"><h4>Which is the Capital of Vietnam?</h4></div>
+				 <div class="image-text" onclick="redButton(0, 'container-image2', 'green2')" >
+				    <img src="assets/La-Paz.jpg" alt="LaPAZ" >
+			        <div class="red"><i class="fa fa-times "></i></div>
+		            <div class="background-text"><p>La Paz</p></div>
+				 </div>
+				 <div class="image-text" onclick="redButton(1, 'container-image2', 'green2')">
+					<img src="assets/Antananarivo.jpg" alt="Antananarivo">
+			        <div class="red"><i class="fa fa-times "></i></div>
+		            <div class="background-text"><p>Antananarivo</p></div>
+				 </div>
+				 <div class="image-text" onclick="redButton(2, 'container-image2', 'green2')">
+				   <img src="assets/Taskent.jpg" alt="Taskent">
+			       <div class="red "><i class="fa fa-times "></i></div>
+		           <div class="background-text"><p>Taskhent</p></div>  
+				 </div>
+				 <div class="image-text" onclick="greenButton('container-image2')">
+			       <img src="assets/kathmandu.JPG" alt="Kathmandu">
+			       <div class="green" id="green2"><i class=" fa fa-check "></i></div>
+		           <div class="background-text"><p>Kathmandu</p></div>
+		        </div> 
+				 <button  class= "button-green" id="button-green2">Next</button>
+		  </div> 
+		   </div>
+		</div>
+     </div>
+   
+	 <div class="expired" id="expired"><p class="expired-text">The time has expired</p></div>
+	<!---<div  class= "inner" id="inner" ></div>
+    <div  class="inner" id="inner2"></div>
+	<div  class="inner" id="innerTotal"></div>---->
+</body>
+<script>
+	var i = $(".short-container").width();
+	$("#button-green").click(function(){
+     $("#container-image").animate({'margin-left': '-=' + i});
+	$("#container-image2").animate({'margin-left': '-=' + i});
+});
+
+</script>
+</html>
