@@ -19,6 +19,7 @@ function myClock(start, container, button, exp){
 		clearTimeout(t);
 		id2.style.pointerEvents = "none";
 		id3.classList.toggle("button-green-auto");
+		id3.style.background = " hsl(150, 100%, 40%)";
 		time = 5;
 		expired.style.display = "block";
 	}
@@ -55,6 +56,7 @@ function greenButton(principal, button, container){
 		  time = 5;
 		 
 		 buttonGreen.classList.toggle("button-green-auto");
+		 buttonGreen.style.background = " hsl(150, 100%, 40%)";
          id.style.pointerEvents = "none";
 		
        
@@ -76,7 +78,7 @@ function greenButton(principal, button, container){
            red[i].style.display = "none";
              clearTimeout(t);
 			time = 5;
-			 
+			  buttonGreen.style.background = " hsl(150, 100%, 40%)";
              green.style.display = "block";
 		 buttonGreen.classList.toggle("button-green-auto");
 			id.style.pointerEvents = "none";
