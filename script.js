@@ -4,7 +4,7 @@ function myInformations(){
 }  
 	
 	
-	var time = 5;
+	var time = 12;
  var t;
 
 function myClock(start, container, button, exp){
@@ -20,7 +20,7 @@ function myClock(start, container, button, exp){
 		id2.style.pointerEvents = "none";
 		id3.classList.toggle("button-green-auto");
 		id3.style.background = " hsl(150, 100%, 40%)";
-		time = 5;
+		time = 12;
 		expired.style.display = "block";
 	}
 }
@@ -53,7 +53,7 @@ function greenButton(principal, button, container){
        if (  green.style.display = "block"){
 		
 		  clearTimeout(t);
-		  time = 5;
+		  time = 12;
 		 
 		 buttonGreen.classList.toggle("button-green-auto");
 		 buttonGreen.style.background = " hsl(150, 100%, 40%)";
@@ -77,7 +77,7 @@ function greenButton(principal, button, container){
         for(var i = 0; i < red.length; i++){
            red[i].style.display = "none";
              clearTimeout(t);
-			time = 5;
+			time = 12;
 			  buttonGreen.style.background = " hsl(150, 100%, 40%)";
              green.style.display = "block";
 		 buttonGreen.classList.toggle("button-green-auto");
