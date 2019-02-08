@@ -1,2 +1,0 @@
-# Short-Quiz
-Web-Development
