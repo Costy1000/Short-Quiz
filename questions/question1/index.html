@@ -14,21 +14,28 @@
 <body  >
 	
 	 
-     <div id="turn"><h4>Turn your phone to play the game</h4></div>
+     
 	 <div id="wrapper">
 		
 		<div id="long-container">
 	      
 		 <div class= "short-container container1">
+			 
 			 <div class="container-image-start  all-containers">
+				  <div id="informations-image">
+	                 <span  id="close" class="close">&times;</span>
+	                <p>You have to answer corectly to 10 questions , you have 10 seconds to answer for each question, if the time ends you will lose the question</p>
+                  </div>
+				 <button id="informations" onclick="myInformations()">Informations</button>
 				 <div class="logo"><img src="assets/Quiz.png" alt="Quiz"></div>
 				 <button class="start" onclick="myClock('time', 'container-image', 'button-green', 'expired1')" >Start Quiz</button>
 			 </div>
 		  </div>
 		
 		  <div class= "short-container">
+			
 			 <div id="container-image" class="all-containers">
-			      <div id="time" class="time"></div>
+			      <div id="time" class="timer"></div>  
 				 <button class="expired" id="expired1">The time has finished</button>
 				 <div class="title"><h4>Which is the Capital of Vietnam?</h4></div>
 				 <div class="image-text" onclick="redButton(0, 'container-image', 'green', 'button-green')">
@@ -57,7 +64,7 @@
 		  </div>
 		 <div class= "short-container" >
 			  <div id="container-image2" class="all-containers">
-				    <div id="time2" class="time"></div>
+				    <div id="time2" class="timer"></div>
 				 <button class="expired" id="expired2">The time has finished</button>
 				 <div class="title"><h4>Which of the following animals doesn't leave in Amazon Jungle?</h4></div>
 				 <div class="image-text" onclick="redButton(0, 'container-image2', 'green2', 'button-green2')" >
@@ -86,7 +93,7 @@
 		    <div class= "short-container">
 			  <div id="container-image3" class="all-containers" >
 				 <button class="expired" id="expired3">The time has finished</button> 
-				 <div id="time3" class="time"></div>
+				 <div id="time3" class="timer"></div>
 				 <div class="title"><h4>Which is the team with the most World-Cup trophies? </h4></div>
 				 <div class="image-text" onclick="redButton(0, 'container-image3', 'green3', 'button-green3')" >
 				    <img src="assets/France.jpg" alt="France" >
@@ -113,7 +120,7 @@
 		  </div>
 		 <div class="short-container">
 		   <div id="container-image4" class="all-containers" >
-			      <div id="time4" class="time"></div>
+			      <div id="time4" class="timer"></div>
 			      <button class="expired" id="expired4">The time has finished</button> 
 				 <div class="title"><h4>How many years was World-War-1 during? </h4></div>
 				 <div class="image-text"  onclick="greenButton('green4', 'button-green4', 'container-image4'),  totalScore('green4')">
@@ -141,7 +148,7 @@
 		   </div>
 		   <div class="short-container">
 		    <div id="container-image5" class="all-containers" >
-				<div id="time5" class="time"></div>
+				<div id="time5" class="timer"></div>
 				 <button class="expired" id="expired5">The time has finished</button>
 				 <div class="title"><h4>Where do you have to go to visit the Parthenon? </h4></div>
 				 <div class="image-text" onclick="redButton(0, 'container-image5', 'green5', 'button-green5')"  >
@@ -169,7 +176,7 @@
 		   </div>
 		   <div class= "short-container">
 			 <div id="container-image6" class="all-containers">
-				 <div id="time6" class="time"></div>
+				 <div id="time6" class="timer"></div>
 				  <button class="expired" id="expired6">The time has finished</button>
 				 <div class="title"><h4>Which of these is not a Marvel Character?</h4></div>
 				 <div class="image-text" onclick="redButton(0, 'container-image6', 'green6', 'button-green6')">
@@ -197,7 +204,7 @@
 		  </div>
 		  <div class= "short-container">
 			 <div id="container-image7" class="all-containers">
-				 <div id="time7" class="time"></div>
+				 <div id="time7" class="timer"></div>
 				  <button class="expired" id="expired7">The time has finished</button>
 				 <div class="title"><h4>Which TV-Series is not based on a comic or a book?</h4></div>
 				 <div class="image-text" onclick="redButton(0, 'container-image7', 'green7', 'button-green7')">
@@ -226,7 +233,7 @@
 		  </div> 
 		  <div class="short-container">
 		   <div id="container-image8" class="all-containers" >
-			     <div id="time8" class="time"></div>
+			     <div id="time8" class="timer"></div>
 			       <button class="expired" id="expired8">The time has finished</button>
 				 <div class="title"><h4>Who painted the famous picture of Mona Lisa? </h4></div>
 				 <div class="image-text"  onclick="greenButton('green8', 'button-green8', 'container-image8'), totalScore('green8')"  >
@@ -254,7 +261,7 @@
 		   </div>
 		    <div class="short-container">
 		   <div id="container-image9" class="all-containers" >
-			     <div id="time9" class="time"></div>
+			     <div id="time9" class="timer"></div>
 			       <button class="expired" id="expired9">The time has finished</button>
 				 <div class="title"><h4>1GB = ? </h4></div>
 				 <div class="image-text" onclick="greenButton('green9', 'button-green9', 'container-image9'), totalScore('green9') "   >
@@ -282,7 +289,7 @@
 		   </div>
 		     <div class="short-container">
 		   <div id="container-image10" class="all-containers" >
-			     <div id="time10" class="time"></div>
+			     <div id="time10" class="timer"></div>
 			       <button class="expired" id="expired10">The time has finished</button>
 				 <div class="title"><h4>J.R.R. Tolkien is the creator of? </h4></div>
 				 <div class="image-text" onclick="greenButton('green10', 'button-green10', 'container-image10'),totalScore('green10') "   >
@@ -314,8 +321,10 @@
 		      <div class="center">
 			     <p class="total">Correct Answers: <span id="inner">0</span></p>
 				 <p class="total">Wrong Answers: <span id="inner2">0</span></p>
-	          
-				 <button  id="restart" >Restart Quiz</button>
+	             <form>
+		            <input type="button" id="restart" value=Restart onclick="window.location.href='index.html'">
+	             </form>
+				
 			  </div>	 
 			</div>
 		  </div>
@@ -374,7 +383,10 @@ var i = $(".short-container").width();
 	$("#long-container").animate({'margin-left': "-=" + i})
 	
 	});
+	$("#close").click(function(){
+	   $("#informations-image").css({display: 'none'});
 	
+	});
 	
 	
 	

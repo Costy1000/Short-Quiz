@@ -20,14 +20,14 @@ body{
 }
 #wrapper{
 	
-	height: 600px;
+	
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
 	overflow: hidden;
 	/*border: 1px solid black;*/
 	  box-shadow: 0px 0px 130px #000000;
-	margin-top: 2rem;
+	
 	
 	
 	
@@ -36,12 +36,12 @@ body{
 
 #long-container{
 	width: 9000px;
-	height: 700px;
+	
 	
 }
 .short-container{
-	
-	height: 700px;
+
+	position: relative;
 	
 	float: left;
 	
@@ -121,7 +121,7 @@ body{
 	width: 100%;
 	height: auto;
 	position: absolute;
-	top: 30%;
+	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -138,7 +138,7 @@ body{
 .all-containers{
 	width: 100%;
 	height: 100%;
-	
+	position: relative;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	padding-top: 0.5rem;
@@ -154,22 +154,14 @@ body{
 	text-align: center;
 }
 
-.time{
+.timer{
 	width: 50px;
-	height: auto;
 	background: hsl(60, 100%, 45%);
-	position: absolute;
-	top: 42%;
-	left: 49%;
-	transform: translate(-50%, -50%);
-	max-width: 500px;
+	
     border-radius: 10px;
 	box-shadow: 0px 0px 10px inset #000000;
-	height: auto;
-	margin-right: auto;
-	overflow: hidden;
-	margin-left: auto;
-	display: block;
+	height: 1.5rem;
+	
 	text-align: center;
 	font-size: 17px;
 	
@@ -188,7 +180,7 @@ body{
 .short-container1{
 	
 }
-.expired, .next, .start, #restart{
+.expired, .next, .start, #restart, #informations{
 	height: auto;	
 	font-size: 25px;
 	border-radius: 10px;
@@ -208,6 +200,44 @@ body{
   bottom: 20%;
   left: 50%;
   transform: translate(-50%, -50%);	
+}
+#informations{
+	position: absolute;
+  top: 9%;
+  left: 50%;
+  transform: translate(-50%, -50%);	
+  background: hsl(280, 100%, 65%);
+	
+}
+#informations-image{
+	
+	height: auto;
+	background: hsla(0, 0%, 15%, 70%);
+	position: absolute;
+   top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);	
+  z-index: 1;
+  border-radius: 10px;	
+	display: none;
+ 
+}
+#informations-image p{
+	line-height: 1.6;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	color: hsl(0, 0%, 75%);
+	
+}
+.close{
+	position: absolute;
+	right: 0;
+	top:  -6px;
+	color: hsl(0, 100%, 70%);
+	font-size: 30px;
+	cursor: pointer;
 }
 .center{
 	position: absolute;
@@ -263,7 +293,7 @@ body{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	cursor: pointer;
-	
+	 box-shadow: 0px 0px 130px #000000;
 		margin-left: 1rem;
 	margin-right: 1rem;
 	
@@ -283,7 +313,8 @@ body{
 }
 .button-green{
 	width: 100px;
-	 background: hsl(150, 100%, 40%);
+	/* background: hsl(150, 100%, 40%);*/
+	 background: hsl(240, 20%, 75%);
 	 pointer-events: none;
 }
 #restart{
@@ -391,12 +422,20 @@ body{
 .red2{
 	opacity: 0;
 }*/
+
+
 @media(min-width: 650px){
 	#wrapper{
 		max-width: 700px;
+		height: 600px;
+		margin-top: 2rem;
+	}
+	#long-container{
+		height: 700px;
 	}
 	.short-container{
 	width: 700px;
+	height: 700px;	
 	}
 	.all-containers{
 		float: left;
@@ -409,6 +448,18 @@ body{
 	.title{
 		width: 100%;
 	}
+	#informations-image{
+	width: 400px;
+	}
+	.timer{
+	z-index: 1;
+	position: absolute;
+	top: 41%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+	
+	}
+	
 }
 #inner{
 	display: inline-block;
@@ -418,9 +469,14 @@ body{
 @media(max-width: 650px){
 	#wrapper{
 		width: 400px;
+		height: 900px ;
+	}
+	#long-container{
+		height: 900px;
 	}
 	.short-container{
 	width: 400px;
+	height: 900px;	
 	}
 	.image-text{
 		width: 170px;
@@ -431,6 +487,17 @@ body{
 	}
 	.title{
 		width: 80%;
+	}
+	#informations-image{
+	  width: 300px;
+	}
+	}
+	.timer{
+	  position: absolute;
+	bottom: 15%;
+	left: 49%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
 	}
 	
 }
